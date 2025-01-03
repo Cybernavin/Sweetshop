@@ -1,27 +1,108 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
-<h1 id="brand">Sweetshop</h1>
-<p id="tag_line">World's largest Sweetshop</p>
+    <h1 id="brand">Sweetshop.com</h1>
+    <p id="tag_line">Worlds largest Sweetshop</p>
   </header>
   <nav>
     <form>
-        <input type="search" name="search" placeholder="Enter your text to search" id="search">
-        <input type="submit" name="submit" id="submit_btn" value="Search">
+      <input type="search" name="search" placeholder="Enter your text to search" id="search">
+      <input type="submit" name="submit" id="submit_btn" value="Search">
     </form>
+    <table id="menu_table">
+      <tr>
+        <td id="menu_item"><a href="#">Home</a></td>
+        <td id="menu_item"><a href="#">Sweets</a></td>
+        <td id="menu_item"><a href="#">Bakeries</a></td>
+        <td id="menu_item"><a href="#">About Us</a></td>
+        <td id="menu_item"><a href="#">Contact Us</a></td>
+      </tr>
+    </table>
   </nav>
-  
-  <section>
 
+  <section>
+    <div id="Popular_sweets-box">
+      <h1 id="Popular_sweets-title">Our Popular Sweets</h1>
+      <img src="Images\gulab-jamun.jpg" alt="gulab-jamun" id="Swees-images">
+      <img src="Images\Kaju-Barfi.jpg" alt="gulab-jamun" id="Swees-images">
+      <img src="Images\kheer.jpg" alt="gulab-jamun" id="Swees-images">
+      <img src="Images\Rasgulla.jpg" alt="Rasgulla" id="Swees-images">
+    </div>
+    <div>
+      <table id="rate_list_box" border="1">
+        <tr>
+          <td id="rate_header">Sweet Name</td>
+          <td id="rate_header">Sweet Price</td>
+        </tr>
+
+        <tr id="rate_content">
+          <td>
+            <ol>
+              <li id="s_name">Gulab-jamun</li>
+              <li id="s_name">Kaju-Barfi</li>
+              <li id="s_name">kheer</li>
+              <li id="s_name">Rasgulla</li>
+            </ol>
+          </td>
+          <td>
+            <ol id="rate">
+              <li id="s_name">₹250 kg</li>
+              <li id="s_name">₹500 kg</li>
+              <li id="s_name">₹100 kg</li>
+              <li id="s_name">₹400 kg</li>
+          </td>
+        </tr>
+      </table>
+      <fieldset>
+        <legend>Order Online</legend>
+        <form action="">
+          Buyer Name <br>
+          <input type="text" name="name" id="Order_input"><br><br>
+          Moblie No. <br>
+          <input type="number" name="moblie" id="Order_input"><br><br>
+          Choose Sweets <br>
+          <select name="Choose Sweets" id="Order_input">
+            <option value="Gulab-jamun">Gulab-jamun</option>
+            <option value="Kaju-Barfi">Kaju-Barfi</option>
+            <option value="kheer">kheer</option>
+            <option value="Rasgulla">Rasgulla</option>
+          </select>
+          <br><br>
+          Enter Quantity <br>
+          <input type="text" name="Enter Quantity" id="Order_input"> <br><br>
+          Address <br>
+          <textarea name="Address" id="Address_form"></textarea>
+          <br><br>
+          <input type="submit" value="Order Now" id="submit_btn2">
+        </form>
+      </fieldset>
+      <div id="abt_us">
+        <h1 id="abt-title">About Us </h1>
+        <hr>
+        <p id="abt_p">Welcome to Sweetshop.com! We bring joy to every bite with our handcrafted sweets, made
+          from the finest ingredients and a sprinkle of love. From traditional treats to modern delights, we offer a
+          wide variety to satisfy your sweet tooth. Indulge in sweetness, because every moment deserves a treat!</p>
+      </div> 
+    </div>
+    <div id="m-sweets">
+      <h1 id="m_sweets">More Sweets</h1>
+    </div>
+    <div id="sweets">
+  
+    </div>
   </section>
+  
   <footer>
 
   </footer>
 </body>
+
 </html>
