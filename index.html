@@ -1,111 +1,292 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    alert( 'Website is under maintenance!' );
-  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sweetshop</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <h1 id="brand">Sweetshop.com</h1>
-    <p id="tag_line">Worlds largest Sweetshop</p>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="container nav-row">
+      <div class="logo">Sweetshop</div>
+
+      <!-- checkbox + label for simple mobile menu toggle (no JS) -->
+      <input id="nav-toggle" type="checkbox" />
+      <label for="nav-toggle" class="nav-toggle-label">☰</label>
+
+      <nav class="nav">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Shop Now</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="actions">
+        <a class="account-btn" href="login.html">👤 My Account</a>
+      </div>
+    </div>
   </header>
-  <nav>
-    <form>
-      <input type="search" name="search" placeholder="Enter your text to search" id="search">
-      <input type="submit" name="submit" id="submit_btn" value="Search">
-    </form>
-    <table id="menu_table">
-      <tr>
-        <td id="menu_item"><a href="#">Home</a></td>
-        <td id="menu_item"><a href="#">Sweets</a></td>
-        <td id="menu_item"><a href="#">Bakeries</a></td>
-        <td id="menu_item"><a href="#">About Us</a></td>
-        <td id="menu_item"><a href="#">Contact Us</a></td>
-      </tr>
-    </table>
-  </nav>
 
-  <section>
-    <div id="Popular_sweets-box">
-      <h1 id="Popular_sweets-title">Our Popular Sweets</h1>
-      <img src="gulab-jamun.jpg" alt="gulab-jamun" id="Swees-images">
-      <img src="Images\Kaju-Barfi.jpg" alt="gulab-jamun" id="Swees-images">
-      <img src="Images\kheer.jpg" alt="gulab-jamun" id="Swees-images">
-      <img src="Images\Rasgulla.jpg" alt="Rasgulla" id="Swees-images">
-    </div>
-    <div>
-      <table id="rate_list_box" border="1">
-        <tr>
-          <td id="rate_header">Sweet Name</td>
-          <td id="rate_header">Sweet Price</td>
-        </tr>
+  <!-- SECTION: POPULAR -->
+  <section class="products">
+    <div class="container">
+      <!-- Professional section header -->
+      <div class="section-header">
+        <div class="section-label">Featured</div>
+        <h2 class="section-title">Our Popular Delights</h2>
+        <p class="section-sub">Handpicked sweets loved by our customers</p>
+        <div class="section-divider"></div>
+      </div>
 
-        <tr id="rate_content">
-          <td>
-            <ol>
-              <li id="s_name">Gulab-jamun</li>
-              <li id="s_name">Kaju-Barfi</li>
-              <li id="s_name">kheer</li>
-              <li id="s_name">Rasgulla</li>
-            </ol>
-          </td>
-          <td>
-            <ol id="rate">
-              <li id="s_name">₹250 kg</li>
-              <li id="s_name">₹500 kg</li>
-              <li id="s_name">₹100 kg</li>
-              <li id="s_name">₹400 kg</li>
-          </td>
-        </tr>
-      </table>
-      <fieldset>
-        <legend>Order Online</legend>
-        <form action="">
-          Buyer Name <br>
-          <input type="text" name="name" id="Order_input"><br><br>
-          Moblie No. <br>
-          <input type="number" name="moblie" id="Order_input"><br><br>
-          Choose Sweets <br>
-          <select name="Choose Sweets" id="Order_input">
-            <option value="Gulab-jamun">Gulab-jamun</option>
-            <option value="Kaju-Barfi">Kaju-Barfi</option>
-            <option value="kheer">kheer</option>
-            <option value="Rasgulla">Rasgulla</option>
-          </select>
-          <br><br>
-          Enter Quantity <br>
-          <input type="text" name="Enter Quantity" id="Order_input"> <br><br>
-          Address <br>
-          <textarea name="Address" id="Address_form"></textarea>
-          <br><br>
-          <input type="submit" value="Order Now" id="submit_btn2">
-        </form>
-      </fieldset>
-      <div id="abt_us">
-        <h1 id="abt-title">About Us </h1>
-        <hr>
-        <p id="abt_p">Welcome to Sweetshop.com! We bring joy to every bite with our handcrafted sweets, made
-          from the finest ingredients and a sprinkle of love. From traditional treats to modern delights, we offer a
-          wide variety to satisfy your sweet tooth. Indulge in sweetness, because every moment deserves a treat!</p>
-      </div> 
-    </div>
-    <div id="m-sweets">
-      <h1 id="m_sweets">More Sweets</h1>
-    </div>
-    <div id="sweets">
-  
-    </div>
+      <div class="product-grid">
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/gulab.jpg" alt="Gulab Jamun">
+          </div>
+          <div class="card-body">
+            <h3>Gulab Jamun</h3>
+            <p class="price">₹120 <span>/ 6 pcs</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/rasgulla.jpg" alt="Rasgulla">
+          </div>
+          <div class="card-body">
+            <h3>Rasgulla</h3>
+            <p class="price">₹150 <span>/ 6 pcs</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/kaju.jpg" alt="Kaju Katli">
+          </div>
+          <div class="card-body">
+            <h3>Kaju Katli</h3>
+            <p class="price">₹320 <span>/ 250g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image">
+            <img src="images/besan.jpg" alt="Besan Ladoo">
+          </div>
+          <div class="card-body">
+            <h3>Besan Ladoo</h3>
+            <p class="price">₹140 <span>/ 250g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+      </div> <!-- product-grid -->
+    </div> <!-- container -->
   </section>
-  
-  <footer>
 
+  <!-- SECTION: MORE SWEETS (centered) -->
+  <section class="more-sweets">
+    <div class="container center">
+
+      <!-- Professional section header -->
+      <div class="section-header center">
+        <div class="section-label">Explore</div>
+        <h2 class="section-title">More Sweets</h2>
+        <p class="section-sub">A wider variety — perfect for gifting and festive treats</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- product-grid: all small cards belong to data-page 1 or 2 (for pagination) -->
+      <div class="product-grid small-cards" id="more-grid">
+
+        <!-- PAGE 1 items (data-page="1") -->
+        <div class="card small" data-page="1">
+          <div class="card-image"><img src="images/laddu.jpg" alt="Motichoor Ladoo"></div>
+          <div class="card-body">
+            <h3>Motichoor Ladoo</h3>
+            <p class="price">₹180 <span>/ 250g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card small" data-page="1">
+          <div class="card-image"><img src="images/soan.jpg" alt="Soan Papdi"></div>
+          <div class="card-body">
+            <h3>Soan Papdi</h3>
+            <p class="price">₹210 <span>/ 250g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card small" data-page="1">
+          <div class="card-image"><img src="images/kalakand.jpg" alt="Kalakand"></div>
+          <div class="card-body">
+            <h3>Kalakand</h3>
+            <p class="price">₹160 <span>/ 200g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card small" data-page="1">
+          <div class="card-image"><img src="images/jalebi.jpg" alt="Jalebi"></div>
+          <div class="card-body">
+            <h3>Jalebi</h3>
+            <p class="price">₹90 <span>/ 100g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <!-- PAGE 2 items (data-page="2") -->
+        <div class="card small" data-page="2">
+          <div class="card-image"><img src="images/peda.jpg" alt="Peda"></div>
+          <div class="card-body">
+            <h3>Peda</h3>
+            <p class="price">₹130 <span>/ 200g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card small" data-page="2">
+          <div class="card-image"><img src="images/dhoka.jpg" alt="Chhena Dhokla"></div>
+          <div class="card-body">
+            <h3>Chhena Dhokla</h3>
+            <p class="price">₹140 <span>/ 200g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card small" data-page="2">
+          <div class="card-image"><img src="images/barfi.jpg" alt="Milk Barfi"></div>
+          <div class="card-body">
+            <h3>Milk Barfi</h3>
+            <p class="price">₹170 <span>/ 200g</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+        <div class="card small" data-page="2">
+          <div class="card-image"><img src="images/rasmalai.jpg" alt="Rasmalai"></div>
+          <div class="card-body">
+            <h3>Rasmalai</h3>
+            <p class="price">₹200 <span>/ 4 pcs</span></p>
+            <button class="btn">Buy Now</button>
+          </div>
+        </div>
+
+      </div> <!-- product-grid -->
+
+      <!-- Pagination controls for More Sweets -->
+      <div class="pagination" id="more-pagination" aria-label="More sweets pages">
+        <button class="page-btn active" data-show="1">1</button>
+        <button class="page-btn" data-show="2">2</button>
+      </div>
+    </div> <!-- container center -->
+  </section>
+
+  <!-- FOOTER - professional, black -->
+  <footer class="site-footer professional black-footer">
+    <div class="container footer-grid professional-grid">
+
+      <div class="footer-col about">
+        <div class="logo-footer">Sweetshop</div>
+        <p>Handmade sweets prepared fresh daily using traditional recipes. Fast delivery and gift packing available.</p>
+        <div class="payments">
+          <span class="pay">Visa</span>
+          <span class="pay">Master</span>
+          <span class="pay">UPI</span>
+        </div>
+      </div>
+
+      <div class="footer-col links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Shop Now</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Gift Packs</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact">
+        <h4>Contact</h4>
+        <p>Phone: +91 98765 43210</p>
+        <p>Email: hello@sweetshop.example</p>
+        <p>Address: 123 Sweet Street, Lucknow, UP</p>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Newsletter</h4>
+        <p>Get exclusive offers & new sweets in your inbox.</p>
+
+        <form class="newsletter-form" action="#" method="post">
+          <input type="email" name="email" placeholder="your@email.com" required>
+          <button type="submit" class="btn small-btn">Subscribe</button>
+        </form>
+
+        <div class="social">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Facebook</a>
+          <a href="#" class="social-link">X</a>
+        </div>
+      </div>
+
+    </div> <!-- footer-grid -->
+
+    <div class="footer-bottom professional-bottom">
+      <p>© <span id="year"></span> Sweetshop • Terms • Privacy • Site by Sweetshop Team</p>
+    </div>
   </footer>
-</body>
 
+  <script>
+    // show current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Simple pagination for "More Sweets" ---
+    (function(){
+      const pageButtons = document.querySelectorAll('#more-pagination .page-btn');
+      const cards = document.querySelectorAll('#more-grid .card.small');
+      const header = document.querySelector('.more-sweets .section-header');
+
+      // showPage now accepts second arg `doScroll` (default false)
+      function showPage(pageNum, doScroll = false) {
+        cards.forEach(c => {
+          if (c.dataset.page === String(pageNum)) {
+            c.style.display = '';
+          } else {
+            c.style.display = 'none';
+          }
+        });
+
+        pageButtons.forEach(btn => {
+          btn.classList.toggle('active', btn.dataset.show === String(pageNum));
+        });
+
+        // only scroll when explicitly requested (i.e., when user clicked a page)
+        if (doScroll && header) {
+          header.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      pageButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // when user clicks, show page and scroll to header
+          showPage(btn.dataset.show, true);
+        });
+      });
+
+      // initialize to page 1 WITHOUT scrolling
+      showPage(1, false);
+    })();
+  </script>
+
+</body>
 </html>
